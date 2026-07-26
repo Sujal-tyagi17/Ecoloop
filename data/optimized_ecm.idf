@@ -1,0 +1,115 @@
+!-   Generator: EcoLoop Building Agent EnergyPlus Generator
+!-   Option: Baseline Small Office Building Model (EnergyPlus 23.2 Compatible)
+
+Version, 23.2;
+
+Building,
+    EcoLoop_Office_Baseline, !- Name
+    0.0,                     !- North Axis {deg}
+    Suburbs,                 !- Terrain
+    0.04,                    !- Loads Convergence Tolerance Value {W}
+    0.40,                    !- Temperature Convergence Tolerance Value {deltaC}
+    FullExterior,            !- Solar Distribution
+    25,                      !- Maximum Number of Warmup Days
+    6;                       !- Minimum Number of Warmup Days
+
+Timestep, 4;
+
+Site:Location,
+    San_Francisco_CA_USA,    !- Name
+    37.77,                   !- Latitude {deg}
+    -122.42,                 !- Longitude {deg}
+    -8.0,                    !- Time Zone {hr}
+    10.0;                    !- Elevation {m}
+
+BuildingSurface:Detailed,
+    Wall_North,              !- Name
+    Wall,                    !- Surface Type
+    ExteriorWall,            !- Construction Name
+    Office_Zone,             !- Zone Name
+    Outdoors,                !- Outside Boundary Condition
+    ,                        !- Outside Boundary Condition Object
+    SunExposed,              !- Sun Exposure
+    WindExposed,             !- Wind Exposure
+    0.50,                    !- View Factor to Ground
+    4,                       !- Number of Vertices
+    0.0, 10.0, 3.0,          !- Vertex 1 X,Y,Z
+    0.0, 10.0, 0.0,          !- Vertex 2 X,Y,Z
+    10.0, 10.0, 0.0,         !- Vertex 3 X,Y,Z
+    10.0, 10.0, 3.0;         !- Vertex 4 X,Y,Z
+
+Zone,
+    Office_Zone,             !- Name
+    0.0,                     !- Direction of Relative North {deg}
+    0.0, 0.0, 0.0,           !- X,Y,Z {m}
+    1,                       !- Type
+    1,                       !- Multiplier
+    3.0,                     !- Ceiling Height {m}
+    300.0;                   !- Volume {m3}
+
+People,
+    Office_Occupants,        !- Name
+    Office_Zone,             !- Zone Name
+    Occupancy_Schedule,      !- Number of People Schedule Name
+    People,                  !- Number of People Calculation Method
+    10.0,                    !- Number of People
+    ,                        !- People per Zone Floor Area {person/m2}
+    ,                        !- Zone Floor Area per Person {m2/person}
+    0.3,                     !- Fraction Radiant
+    Auto,                    !- Sensible Heat Fraction
+    Activity_Schedule,       !- Activity Level Schedule Name
+    0.12,                    !- Carbon Dioxide Generation Rate {m3/s-W}
+    No,                      !- Enable ASHRAE 55 Comfort Warnings
+    ZoneAveraged,            !- Mean Radiant Temperature Calculation Type
+    ,                        !- Surface Name/Angle Factor List Name
+    Work_Efficiency_Sched,   !- Work Efficiency Schedule Name
+    Clothing_Schedule,       !- Clothing Insulation Schedule Name
+    Air_Velocity_Schedule,   !- Air Velocity Schedule Name
+    Fanger;                  !- Thermal Comfort Model 1 Type
+
+Schedule:Compact,
+    Cooling_Setpoint_Sched,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 07:00, 28.0,      !- Night setback (unoccupied)
+    Until: 18:00, 26.5,      !- Occupied setpoint (Baseline: 22.0 C)
+    Until: 24:00, 28.0;      !- Night setback
+
+Schedule:Compact,
+    Heating_Setpoint_Sched,  !- Name
+    Temperature,             !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 07:00, 15.0,      !- Night setback
+    Until: 18:00, 20.0,      !- Occupied setpoint (Baseline: 20.0 C)
+    Until: 24:00, 15.0;      !- Night setback
+
+ThermostatSetpoint:DualSetpoint,
+    Office_Dual_Setpoint,    !- Name
+    Heating_Setpoint_Sched,  !- Heating Setpoint Temperature Schedule Name
+    Cooling_Setpoint_Sched;  !- Cooling Setpoint Temperature Schedule Name
+
+ZoneControl:Thermostat,
+    Office_Thermostat,       !- Name
+    Office_Zone,             !- Zone Name
+    DualSetpoint,            !- Control Type
+    ThermostatSetpoint:DualSetpoint, !- Control Object Type
+    Office_Dual_Setpoint;    !- Control Name
+
+HVACTemplate:Zone:IdealLoadsAirSystem,
+    Office_Zone,             !- Zone Name
+    Office_Thermostat,       !- Thermostat Name
+    ,                        !- System Availability Schedule Name
+    50.0,                    !- Maximum Heating Supply Air Temperature {C}
+    13.0,                    !- Minimum Cooling Supply Air Temperature {C}
+    0.010,                   !- Maximum Heating Supply Air Humidity Ratio
+    0.009,                   !- Minimum Cooling Supply Air Humidity Ratio
+    NoLimit,                 !- Heating Limit
+    ,                        !- Maximum Heating Air Flow Rate {m3/s}
+    NoLimit,                 !- Cooling Limit
+    ;                        !- Maximum Cooling Air Flow Rate {m3/s}
+
+Output:Variable, *, Zone Air Temperature, Hourly;
+Output:Variable, *, Zone Thermal Comfort Fanger Model PMV, Hourly;
+Output:Variable, *, Zone Ideal Loads Supply Air Total Cooling Energy, Hourly;

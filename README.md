@@ -99,3 +99,5 @@ Open [`dist/demo.html`](file:///c:/Users/tyagi/Desktop/EcoLoop/dist/demo.html) d
 
 ---
 
+### 👨‍💻 Developed By
+**Made with ❤️ by Sujal Tyagi**

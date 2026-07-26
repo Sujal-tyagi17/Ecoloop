@@ -19,18 +19,6 @@ Without running any code, explore the operational closed-loop UI and metrics bel
 
 ---
 
-## 📊 Scorecard & Benchmark Proof
-
-| Criterion | Weight | Baseline Fixed (22°C) | EcoLoop Autonomous AI | Realized Impact | Verified Evidence |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **System Integration** | **30%** | 24 / 24 steps | **24 / 24 steps** | **100% Uptime** | Zero crashes across full horizon |
-| **Energy Efficiency Realized** | **25%** | 48.4 kWh | **37.6 kWh** | **22.3% kWh Saved** 📉 | Measured HVAC power reduction |
-| **Thermal Comfort & Constraints**| **20%** | 79.2% | **95.8%** | **+16.6% Comfort** 🌡️ | ISO 7730 Fanger PMV in $[-0.5, +0.5]$ |
-| **Agentic Autonomy & Code Elegance**| **15%** | Rigid Rules | **MCP Protocol** | **Zero Human Code Edit** | 4 JSON-RPC tools + self-correction |
-| **Presentation & Documentation**| **10%** | N/A | **Complete Deck & PoC**| **Interactive Dashboard** | Standalone HTML demo & Architecture doc |
-
----
-
 ## 💡 Problem & Innovation
 
 Buildings consume ~40% of global electricity and drive carbon emissions. Traditional Building Management Systems (BMS) rely on rigid, fixed schedules (e.g., maintaining 22°C non-stop) that fail to adapt to dynamic grid carbon intensity spikes ($gCO_2/kWh$), variable electricity tariffs ($/kWh), and human thermal comfort limits.

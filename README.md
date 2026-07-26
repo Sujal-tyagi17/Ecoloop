@@ -1,24 +1,27 @@
 # ⚡ EcoLoop — Physical AI Autonomous Building Agent
 
-> **Hackathon Submission**: Closed-Loop Smart Building Energy Optimization using EnergyPlus Digital Sandbox, Model Context Protocol (MCP), and Open-Source Cognitive LLM Agents.
+> **Physical AI Proof-of-Concept**: Autonomous Closed-Loop Smart Building Energy Optimization using EnergyPlus Digital Sandbox, Model Context Protocol (MCP), and Open-Source Cognitive LLM Agents.
 
 ---
 
-## 🎯 Executive Summary & Quick Links
+## 📸 Visual Showcase & Dashboard Overview
 
-If you have 1 minute to explore this repository:
+Without running any code, explore the operational closed-loop UI and metrics below:
 
-- 🚀 **Live Interactive Pitch Demo (Zero-setup)**: Open [`dist/demo.html`](file:///c:/Users/tyagi/Desktop/EcoLoop/dist/demo.html) in any browser.
-- ⚡ **1-Command Automated Pipeline Verification**: `python test_pipeline.py`
-- 📊 **Quantitative Dashboard**: `streamlit run app/main.py`
-- 📄 **System Architecture Report**: [`SYSTEM_ARCHITECTURE.md`](file:///c:/Users/tyagi/Desktop/EcoLoop/SYSTEM_ARCHITECTURE.md)
-- 🏢 **Generated Building Models**: [`data/baseline_building.idf`](file:///c:/Users/tyagi/Desktop/EcoLoop/data/baseline_building.idf) → [`data/optimized_ecm.idf`](file:///c:/Users/tyagi/Desktop/EcoLoop/data/optimized_ecm.idf)
+### 1. Quantitative Energy & Comfort Dashboard
+![EcoLoop Dashboard Overview](docs/dashboard_overview.png)
+
+### 2. ISO 7730 Fanger PMV Comfort Index & Dynamic Power Shaving
+![Fanger PMV & HVAC Power Charts](docs/pmv_power_charts.png)
+
+### 3. Model Context Protocol (MCP) Forward Injection IDF Diff
+![MCP Forward Injection IDF Diff](docs/mcp_idf_diff.png)
 
 ---
 
-## 📊 Performance Scorecard & Benchmark Proof
+## 📊 Scorecard & Benchmark Proof
 
-| Hackathon Criterion | Weight | Baseline Fixed (22°C) | EcoLoop Autonomous AI | Realized Impact | Verified Evidence |
+| Criterion | Weight | Baseline Fixed (22°C) | EcoLoop Autonomous AI | Realized Impact | Verified Evidence |
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **System Integration** | **30%** | 24 / 24 steps | **24 / 24 steps** | **100% Uptime** | Zero crashes across full horizon |
 | **Energy Efficiency Realized** | **25%** | 48.4 kWh | **37.6 kWh** | **22.3% kWh Saved** 📉 | Measured HVAC power reduction |

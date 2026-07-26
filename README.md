@@ -19,7 +19,7 @@ Without running any code, explore the operational closed-loop UI and metrics bel
 
 ---
 
-## 💡 Problem & Innovation
+## 💡 Problem
 
 Buildings consume ~40% of global electricity and drive carbon emissions. Traditional Building Management Systems (BMS) rely on rigid, fixed schedules (e.g., maintaining 22°C non-stop) that fail to adapt to dynamic grid carbon intensity spikes ($gCO_2/kWh$), variable electricity tariffs ($/kWh), and human thermal comfort limits.
 

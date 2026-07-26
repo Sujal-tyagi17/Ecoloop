@@ -65,7 +65,6 @@ Buildings consume ~40% of global electricity and drive carbon emissions. Traditi
 | **2** | **Building Models (.idf files)** | [`data/baseline_building.idf`](file:///c:/Users/tyagi/Desktop/EcoLoop/data/baseline_building.idf)<br>[`data/optimized_ecm.idf`](file:///c:/Users/tyagi/Desktop/EcoLoop/data/optimized_ecm.idf) | Baseline Small Office IDF and AI-generated runtime ECM model |
 | **3** | **Quantitative Savings Dashboard** | [`app/main.py`](file:///c:/Users/tyagi/Desktop/EcoLoop/app/main.py)<br>[`dist/demo.html`](file:///c:/Users/tyagi/Desktop/EcoLoop/dist/demo.html) | Interactive Streamlit Plotly dashboard and standalone HTML presentation app |
 | **4** | **System Architecture Document** | [`SYSTEM_ARCHITECTURE.md`](file:///c:/Users/tyagi/Desktop/EcoLoop/SYSTEM_ARCHITECTURE.md) | Technical report on tool-calling, prompt engineering, and latency management |
-| **5** | **PoC Demonstration Video** | Browser Subagent Video Recording | Recorded session saved in workspace artifacts |
 
 ---
 

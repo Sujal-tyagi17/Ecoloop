@@ -99,5 +99,3 @@ Open [`dist/demo.html`](file:///c:/Users/tyagi/Desktop/EcoLoop/dist/demo.html) d
 
 ---
 
-## 📄 License
-MIT License. Submitted for Hackathon PoC.

@@ -4,9 +4,9 @@
 
 ---
 
-## 🎯 Evaluator Summary & Quick Links
+## 🎯 Executive Summary & Quick Links
 
-If you have 1 minute to evaluate this repository:
+If you have 1 minute to explore this repository:
 
 - 🚀 **Live Interactive Pitch Demo (Zero-setup)**: Open [`dist/demo.html`](file:///c:/Users/tyagi/Desktop/EcoLoop/dist/demo.html) in any browser.
 - ⚡ **1-Command Automated Pipeline Verification**: `python test_pipeline.py`
@@ -16,7 +16,7 @@ If you have 1 minute to evaluate this repository:
 
 ---
 
-## 📊 Scorecard & Benchmark Proof (Evaluation Criteria Matrix)
+## 📊 Performance Scorecard & Benchmark Proof
 
 | Hackathon Criterion | Weight | Baseline Fixed (22°C) | EcoLoop Autonomous AI | Realized Impact | Verified Evidence |
 | :--- | :---: | :---: | :---: | :---: | :--- |
@@ -66,9 +66,9 @@ Buildings consume ~40% of global electricity and drive carbon emissions. Traditi
 
 ---
 
-## 📦 Required Deliverables Inventory
+## 📦 Deliverables Inventory
 
-| # | Required Deliverable | Repository File Path | Description |
+| # | Deliverable | Repository File Path | Description |
 | :-: | :--- | :--- | :--- |
 | **1** | **Fully Functional Source Code** | [`app/`](file:///c:/Users/tyagi/Desktop/EcoLoop/app/) | Unified Python codebase for EnergyPlus engine, MCP server, and LLM agent |
 | **2** | **Building Models (.idf files)** | [`data/baseline_building.idf`](file:///c:/Users/tyagi/Desktop/EcoLoop/data/baseline_building.idf)<br>[`data/optimized_ecm.idf`](file:///c:/Users/tyagi/Desktop/EcoLoop/data/optimized_ecm.idf) | Baseline Small Office IDF and AI-generated runtime ECM model |
@@ -78,7 +78,7 @@ Buildings consume ~40% of global electricity and drive carbon emissions. Traditi
 
 ---
 
-## ⚡ Quickstart Guide for Evaluators
+## ⚡ Quickstart Guide
 
 ### Option A: Automated Pipeline Test (15 Seconds)
 ```bash
@@ -97,4 +97,4 @@ Open [`dist/demo.html`](file:///c:/Users/tyagi/Desktop/EcoLoop/dist/demo.html) d
 ---
 
 ## 📄 License
-MIT License. Submitted for Hackathon Evaluation.
+MIT License. Submitted for Hackathon PoC.
